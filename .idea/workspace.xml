@@ -5,25 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0276fd30-924e-452b-87be-3c5bc75324b9" name="Changes" comment="latest commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/aria_log.00000001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/aria_log_control" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/ib_buffer_pool" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/ib_logfile0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/ibdata1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/mariadb_upgrade_info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/multi-master.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/undo001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/undo002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mariadb/undo003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitudeDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitureDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Voiture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitudeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitudeDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitureDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/VoitureDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Voiture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Voiture.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728394956254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="latest commit">
+      <option name="closed" value="true" />
+      <created>1728473946812</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728473946812</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

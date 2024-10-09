@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface VoitudeDAO {
 
-    void ajouterVoiture(Voiture voiture);
+    int ajouterVoiture(Voiture voiture);
 
     Voiture trouverVoitureParId(int id);
 

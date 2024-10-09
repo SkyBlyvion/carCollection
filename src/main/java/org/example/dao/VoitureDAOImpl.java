@@ -2,10 +2,8 @@ package org.example.dao;
 
 import org.example.model.Voiture;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VoitureDAOImpl implements VoitudeDAO {
@@ -18,7 +16,7 @@ public class VoitureDAOImpl implements VoitudeDAO {
         }
 
     @Override
-    public void ajouterVoiture(Voiture voiture) {
+    public int ajouterVoiture(Voiture voiture) {
             String sql= "INSERT INTO voiture(marque, modele, nbrPorte, nbrVitesse, isOccas, stock, imageName) " +
                     "VALUE (?,?,?,?,?,?,?)";
             try {
@@ -32,9 +30,17 @@ public class VoitureDAOImpl implements VoitudeDAO {
                 stmt.setInt(6, voiture.getStock());
                 stmt.setString(7, voiture.getImageName());
                 stmt.executeUpdate();
+                try(ResultSet generateKeys = stmt.getGeneratedKeys()){
+                    if(generateKeys.next()){
+                        return generateKeys.getInt(1);
+                    } else {
+                        throw new SQLException("Pas d'ID generee");
+                    }
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
+            return -1;
     }
 
     @Override
@@ -44,6 +50,27 @@ public class VoitureDAOImpl implements VoitudeDAO {
 
     @Override
     public List<Voiture> trouverToutes() {
+            String sql = "SELECT * FROM voiture";
+            List<Voiture> voitures = new ArrayList<>();
+            try {
+                Connection conn = getConnection();
+                Statement stmt = conn.createStatement();
+                ResultSet rs = stmt.executeQuery(sql);
+                while (rs.next()) {
+                    Voiture car = new Voiture(rs.getInt("id"),
+                            rs.getString("marque"),
+                            rs.getString("modele"),
+                            rs.getInt("stock"),
+                            rs.getInt("nbrVitesse"),
+                            rs.getInt("nbrPorte"),
+                            rs.getBoolean("isOccas"),
+                            rs.getString("imageName")
+                    );
+                    voitures.add(car);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         return List.of();
     }
 
